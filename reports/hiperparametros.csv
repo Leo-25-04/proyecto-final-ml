@@ -1,0 +1,6 @@
+modelo,hiperparametros,pr_auc_validacion
+KMeans (sklearn),{'k': 4},0.799749233622684
+KMeans (propio),{'k': 3},0.7683637913050032
+GMM,{'k': 2},0.9969700922609981
+DBSCAN,"{'eps': 1.0, 'min_samples': 10}",0.9245987325220484
+Isolation Forest,{'max_samples': 65536},0.8731854738596656
