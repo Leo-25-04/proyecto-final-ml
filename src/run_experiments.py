@@ -140,8 +140,8 @@ def graficar(puntajes, y_test):
         ax.imshow(cm, vmin=0, vmax=1, cmap="Blues")
         for i in range(2):
             for j in range(2):
-                ax.text(j, i, f"{cm[i, j]:.2f}", ha="center", va="center")
-        ax.set(title=nombre, xticks=[0, 1], yticks=[0, 1],
+                ax.text(j, i, f"{cm[i, j]:.3f}", ha="center", va="center", color="white" if cm[i, j] > 0.5 else "black")
+        ax.set(title=nombre, xticks=[0, 1], yticks=[0, 1], xticklabels=["Legítima", "Fraude"], yticklabels=["Legítima", "Fraude"],
                xlabel="Predicho", ylabel="Real")
     plt.tight_layout()
     plt.savefig(FIG / "06_matrices_confusion.png", dpi=150)
@@ -178,4 +178,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
